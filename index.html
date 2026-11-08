@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="A scroll-driven journey beyond the horizon." />
+    <title>Beyond the Horizon</title>
+  </head>
+  <body>
+    <div id="experience">
+      <canvas id="journey" role="img" aria-label="A continuous cinematic journey through a cosmic horizon"></canvas>
+      <div id="fade" aria-hidden="true"></div>
+      <div id="loader" aria-live="polite"><span class="loader-line"><i></i></span><span class="loader-label">Preparing the journey</span></div>
+      <div id="scroll-hint" aria-hidden="true">
+        <div class="scrolldown" style="--color: skyblue">
+            <div class="chevrons">
+                <div class="chevrondown"></div>
+                <div class="chevrondown"></div>
+            </div>
+        </div>
+      </div>
+      <div id="scroll-track" aria-hidden="true"></div>
+      <main id="story" aria-label="Beyond the Horizon"></main>
+    </div>
+    <noscript>This experience needs JavaScript enabled to display its frame sequence.</noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
