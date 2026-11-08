@@ -10,7 +10,7 @@ document.documentElement.style.setProperty('--grain-opacity', String(FILM_GRAIN_
 
 async function boot() {
   try {
-    const response = await fetch('/frames/manifest.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}frames/manifest.json`);
     if (!response.ok) throw new Error('Frame manifest is missing. Run bash scripts/optimize-frames.sh first.');
     const manifest = await response.json();
     if (!manifest.scenes?.length || manifest.scenes.some((scene) => !Number.isInteger(scene.count) || scene.count < 1)) {

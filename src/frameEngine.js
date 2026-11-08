@@ -1,4 +1,4 @@
-const ROOT = '/frames';
+const ROOT = `${import.meta.env.BASE_URL}frames`;
 import { CROSSFADE_FRAMES, DPR_CAP, PREFETCH_AHEAD, PREFETCH_BEHIND, SHARPEN } from './config.js';
 
 export class FrameEngine {
@@ -59,7 +59,7 @@ export class FrameEngine {
     const scene = this.scenes[sceneIndex];
     const local = index - this.starts[sceneIndex] + 1;
     const directory = this.mobile ? (scene.mobileDir || scene.dir) : scene.dir;
-    const root = this.mobile ? '/frames-m' : ROOT;
+    const root = this.mobile ? `${import.meta.env.BASE_URL}frames-m` : ROOT;
     return `${root}/${directory}/f_${String(local).padStart(4, '0')}.webp`;
   }
 
